@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mapa interactivo de las provincias de España con sus capitales y población.">
+  <title>Provincias de España</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="mapa-provincias.js" defer></script>
+  <script src="codigo.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <p class="sobrelinea">Explora el territorio</p>
+      <h1>Provincias de España</h1>
+      <p class="introduccion">Selecciona una provincia en el mapa para consultar su capital y población.</p>
+    </div>
+  </header>
+
+  <main class="contenedor contenido">
+    <section class="mapa-contenedor" aria-label="Mapa interactivo de España">
+      <div id="mapa" aria-label="Mapa de las provincias de España. Selecciona una provincia para ver sus datos."></div>
+      <p id="estado" class="estado" role="status" aria-live="polite">Cargando el mapa…</p>
+    </section>
+
+    <aside class="ficha" aria-labelledby="titulo-ficha">
+      <p class="sobrelinea">Datos provinciales</p>
+      <h2 id="titulo-ficha">Elige una provincia</h2>
+      <p id="ayuda-ficha">Haz clic sobre una zona del mapa para ver su información.</p>
+      <dl id="datos-provincia" class="datos" hidden>
+        <div>
+          <dt>Capital</dt>
+          <dd id="capital"></dd>
+        </div>
+        <div>
+          <dt>Habitantes</dt>
+          <dd id="habitantes"></dd>
+        </div>
+      </dl>
+      <p class="nota">Población provincial: estimación redondeada a miles, referencia 2023. Las cifras pueden variar según la fecha y la fuente.</p>
+    </aside>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p>Mapa vectorial provincial: <a href="https://github.com/codeforgermany/click_that_hood" target="_blank" rel="noreferrer">Click that ’hood</a>. Copyright (c) 2013-2021 Code for America; licencia MIT. Incluido localmente; no carga teselas externas.</p>
+      <p>Capitales provinciales y población aproximada (2023); consulta <a href="https://www.ine.es/" target="_blank" rel="noreferrer">INE</a> para las cifras oficiales más recientes.</p>
+    </div>
+  </footer>
+</body>
+</html>
